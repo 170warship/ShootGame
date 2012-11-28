@@ -6,6 +6,7 @@
 	<title></title>
 </head>
 <body>
+
 	<div name="" id="text" cols="30" rows="10">aaaa</div>
 	<device type="media" onchange="update(this.data)"></device>
 	<video id="video" width="100" height="100" autoplay></video>
@@ -96,7 +97,7 @@ function oriCallback(evt){
 
 
 
-	document.querySelector("#test").innerHTML = "x: "+ beta.toFixed(2) + " y: " + gamma.toFixed(2) + " z: " + (alpha != null?alpha.toFixed(2):0)
+	document.querySelector("#test").innerHTML = "x: "+ beta.toFixed(2) + " y: " + gamma.toFixed(2) + " z: " + (alpha != null?alpha.toFixed(2):0);
 	              	
 	                
 	                  
@@ -104,8 +105,10 @@ function oriCallback(evt){
 	          
 }
 
-GameObj.addOrientaionListener(oriCallback);
-</script>	
+
+
+</script>
+<script type="text/javascript" defer="defer">GameObj.addOrientaionListener(oriCallback);</script>	
 </body>
 </html>
 
