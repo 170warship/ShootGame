@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<div  id="text" >aaaa</div>
+	<div  id="test" >aaaa</div>
 	<device type="media" onchange="update(this.data)"></device>
 	<video id="video" width="100" height="100" autoplay></video>
 	<canvas id="canvas" width="500" height="700"></canvas>
@@ -27,7 +27,7 @@ var GameObj = {};
 		window.addEventListener('deviceorientation',orientationListener,false);//方向感应器??
 		window.addEventListener('MozOrientation',orientationListener,false);//
 		window.addEventListener('devicemotion',orientationListener,false);//
-	}
+	};
 
 	obj.addOrientaionListener = addOrientaionListener;
 
@@ -108,7 +108,7 @@ function oriCallback(evt){
 
 
 </script>
-<script type="text/javascript" defer="defer">GameObj.addOrientaionListener(oriCallback);</script>	
+<script type="text/javascript">GameObj.addOrientaionListener(oriCallback);</script>	
 </body>
 </html>
 
