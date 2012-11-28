@@ -87,17 +87,17 @@ function oriCallback(evt){
 	var beta = evt.beta;
 	var alpha = evt.alpha;
 
-	/*if(evt.accelerationIncludingGravity){
-	// window.removeEventListener('deviceorientation', this.orientationListener, false);
-	gamma = event.accelerationIncludingGravity.x*10
-	beta = -event.accelerationIncludingGravity.y*10
-	alpha = event.accelerationIncludingGravity.z*10
-	}*/
+	if(evt.accelerationIncludingGravity){
+	// window.removeEventListener('deviceorientation', oriCallback, false);
+	gamma = evt.accelerationIncludingGravity.x*10
+	beta = -evt.accelerationIncludingGravity.y*10
+	alpha = evt.accelerationIncludingGravity.z*10
+	}
 
 
 
 
-	document.querySelector("#test").innerHTML = "x: "+ beta + " y: " + gamma + " z: " + (alpha != null?alpha:0);
+	document.querySelector("#test").innerHTML = "x: "+ beta.toFixed(2) + " y: " + gamma.toFixed(2) + " z: " + (alpha != null?alpha.toFixed(2):0);
 	              	
 	                
 	                  
