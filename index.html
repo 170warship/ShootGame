@@ -79,7 +79,7 @@ function draw(canvas, video){
     var ch = canvas.height;
     ctx.drawImage(video, 0,0,cw,ch);
 
-    var C = Math.tan( (Math.PI/2) -  GameObj.acceleration.beta*(Math.PI/180) )*(width/2);
+    var C = Math.tan( (Math.PI/2) -  GameObj.acceleration.beta*(Math.PI/180) )*(width/2) + (width/2);
     _c = C;
     ctx.strokeStyle = '#ffffff';
     ctx.lineWidth = 5;
