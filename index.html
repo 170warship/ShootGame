@@ -17,7 +17,7 @@
 	<div  id="test" class="text" >aaaa</div>
 	<device type="media" onchange="update(this.data)"></device>
 	<video id="video" width="10" height="10" autoplay></video>
-	<canvas id="canvas" width="400" height="600"></canvas>
+	<canvas id="canvas" width="300" height="500"></canvas>
 <script type="text/javascript">
  	 function update(stream) {
  	   document.querySelector('video').src = stream.url;
@@ -25,7 +25,7 @@
 </script>
 <script type="text/javascript">
 var GameObj = {};
-var width = 400,height = 600;
+var width = 300,height = 500;
 (function (obj){
 
 
@@ -121,7 +121,7 @@ function oriCallback(evt){
 	GameObj.acceleration.alpha = alpha;
 
 
-	document.querySelector("#test").innerHTML = "x: "+ beta.toFixed(2) + " y: " + gamma.toFixed(2) + " z: " + (alpha != null?alpha.toFixed(2):0)+'  C:'+_c;
+	document.querySelector("#test").innerHTML = "x: "+ beta.toFixed(2) + " y: " + gamma.toFixed(2) + " z: " + (alpha != null?alpha.toFixed(2):0);
 	              	
 	                
 	                  
