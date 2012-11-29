@@ -17,7 +17,7 @@
 	<div  id="test" class="text" >aaaa</div>
 	<device type="media" onchange="update(this.data)"></device>
 	<video id="video" width="10" height="10" autoplay></video>
-	<canvas id="canvas" width="300" height="500"></canvas>
+	<canvas id="canvas" width="250" height="400"></canvas>
 <script type="text/javascript">
  	 function update(stream) {
  	   document.querySelector('video').src = stream.url;
@@ -83,9 +83,12 @@ function draw(canvas, video){
     _c = C;
     ctx.strokeStyle = '#ffffff';
     ctx.lineWidth = 5;
+    ctx.beginPath();
     ctx.moveTo(0, C);
     ctx.lineTo(width, C);
+
     ctx.stroke();
+    ct.closePath();
 
 }
 
@@ -121,7 +124,7 @@ function oriCallback(evt){
 	GameObj.acceleration.alpha = alpha;
 
 
-	document.querySelector("#test").innerHTML = "x: "+ beta.toFixed(2) + " y: " + gamma.toFixed(2) + " z: " + (alpha != null?alpha.toFixed(2):0);
+	document.querySelector("#test").innerHTML = "x: "+ beta.toFixed(2) + " y: " + gamma.toFixed(2) + " z: " + (alpha != null?alpha.toFixed(2):0) + ' c:'+_c;
 	              	
 	                
 	                  
